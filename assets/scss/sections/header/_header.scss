@@ -79,18 +79,35 @@
     }
 }
 .language-dropdown{
-    button{
+    .dropdown-toggle{
         width: 50px;
         position: relative;
         text-align: left;
+        padding-right: 20px;
         svg{
             font-size: 30px;
             color: #444444;
         }
-        &::after{
+        &::after {
+            display: inline-block;
+            margin-left: 12px;
+            position: absolute;
+            top: -5px;
+            vertical-align: none !important;
             content: url(../images/icon/dropdown-icon.svg);
-            margin-left: 7px;
-            margin-top: 2px;
+            border: none !important;
+        }
+    }
+    .dropdown-menu{
+        &.show{
+            top: 26px !important;
+        }
+    }
+    .dropdown-item{
+        &.active,
+        &:active{
+            background: transparent;
+            color: #444444;
         }
     }
 }

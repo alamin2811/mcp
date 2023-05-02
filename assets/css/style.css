@@ -28307,19 +28307,31 @@ CSS table of content
   color: #ffffff;
 }
 
-.language-dropdown button {
+.language-dropdown .dropdown-toggle {
   width: 50px;
   position: relative;
   text-align: left;
+  padding-right: 20px;
 }
-.language-dropdown button svg {
+.language-dropdown .dropdown-toggle svg {
   font-size: 30px;
   color: #444444;
 }
-.language-dropdown button::after {
+.language-dropdown .dropdown-toggle::after {
+  display: inline-block;
+  margin-left: 12px;
+  position: absolute;
+  top: -5px;
+  vertical-align: none !important;
   content: url(../images/icon/dropdown-icon.svg);
-  margin-left: 7px;
-  margin-top: 2px;
+  border: none !important;
+}
+.language-dropdown .dropdown-menu.show {
+  top: 26px !important;
+}
+.language-dropdown .dropdown-item.active, .language-dropdown .dropdown-item:active {
+  background: transparent;
+  color: #444444;
 }
 
 .mobile-menu {
