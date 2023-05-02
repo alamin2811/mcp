@@ -1,0 +1,36 @@
+//text style mixin
+@mixin textStyle($fontSize, $fontWeight, $lineHeight) {
+    font-size: $fontSize;
+    font-weight: $fontWeight;
+    line-height: $lineHeight;
+}
+
+//breakpoint mixin
+@mixin breakpointMaxWidth($width) {
+    @media screen and (max-width: $width) {
+        @content;
+    }
+}
+
+@include breakpointMaxWidth(1699px) {}
+
+@include breakpointMaxWidth(1199px) {}
+
+@include breakpointMaxWidth(991px) {
+    .header-content{
+        display: none;
+    }
+    .mobile-menu{
+        display: block;
+    }
+}
+
+@include breakpointMaxWidth(768px) {}
+
+@include breakpointMaxWidth(575px) {}
+
+@include breakpointMaxWidth(425px) {}
+
+@include breakpointMaxWidth(375px){}
+
+
